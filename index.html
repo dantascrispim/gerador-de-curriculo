@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Gerador de Currículo</h1>
+            
+            <div class="form-section">
+                <h3>Informações Pessoais</h3>
+                <div class="form-row">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" placeholder="Seu nome completo">
+                </div>
+                <div class="form-row">
+                    <label for="title">Cargo/Título Profissional:</label>
+                    <input type="text" id="title" placeholder="Ex: Desenvolvedor Web">
+                </div>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="seu.email@exemplo.com">
+                </div>
+                <div class="form-row">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" placeholder="(00) 00000-0000">
+                </div>
+                <div class="form-row">
+                    <label for="location">Localização:</label>
+                    <input type="text" id="location" placeholder="Cidade, Estado">
+                </div>
+                <div class="form-row">
+                    <label for="linkedin">LinkedIn (opcional):</label>
+                    <input type="text" id="linkedin" placeholder="linkedin.com/in/seu-perfil">
+                </div>
+            </div>
+          
+            <div class="form-section">
+                <h3>Resumo/Perfil Profissional</h3>
+                <div class="form-row">
+                    <label for="summary">Descreva brevemente seu perfil e objetivos:</label>
+                    <textarea id="summary" placeholder="Breve descrição sobre você e suas habilidades"></textarea>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Experiência Profissional</h3>
+                <div class="form-row">
+                    <label for="exp-company">Empresa:</label>
+                    <input type="text" id="exp-company" placeholder="Nome da empresa">
+                </div>
+                <div class="form-row">
+                    <label for="exp-position">Cargo:</label>
+                    <input type="text" id="exp-position" placeholder="Seu cargo">
+                </div>
+                <div class="form-row">
+                    <label for="exp-period">Período:</label>
+                    <input type="text" id="exp-period" placeholder="Jan 2020 - Atual">
+                </div>
+                <div class="form-row">
+                    <label for="exp-description">Descrição das atividades:</label>
+                    <textarea id="exp-description" placeholder="Descreva suas responsabilidades e conquistas"></textarea>
+                </div>
+                <button id="add-experience">Adicionar Experiência</button>
+                
+                <div id="experiences-list" class="dynamic-list"></div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Formação Acadêmica</h3>
+                <div class="form-row">
+                    <label for="edu-institution">Instituição:</label>
+                    <input type="text" id="edu-institution" placeholder="Nome da escola/universidade">
+                </div>
+                <div class="form-row">
+                    <label for="edu-degree">Curso/Grau:</label>
+                    <input type="text" id="edu-degree" placeholder="Ex: Bacharel em Ciência da Computação">
+                </div>
+                <div class="form-row">
+                    <label for="edu-period">Período:</label>
+                    <input type="text" id="edu-period" placeholder="2016 - 2020">
+                </div>
+                <div class="form-row">
+                    <label for="edu-description">Descrição (opcional):</label>
+                    <textarea id="edu-description" placeholder="Atividades relevantes, TCC, etc."></textarea>
+                </div>
+                <button id="add-education">Adicionar Formação</button>
+                
+                <div id="education-list" class="dynamic-list"></div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Habilidades</h3>
+                <div class="form-row">
+                    <label for="skill-name">Habilidade:</label>
+                    <input type="text" id="skill-name" placeholder="Ex: HTML/CSS">
+                </div>
+                <button id="add-skill">Adicionar Habilidade</button>
+                
+                <div id="skills-list" class="dynamic-list"></div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Idiomas</h3>
+                <div class="form-row">
+                    <label for="language-name">Idioma:</label>
+                    <input type="text" id="language-name" placeholder="Ex: Inglês">
+                </div>
+                <div class="form-row">
+                    <label for="language-level">Nível:</label>
+                    <input type="text" id="language-level" placeholder="Ex: Fluente">
+                </div>
+                <button id="add-language">Adicionar Idioma</button>
+                
+                <div id="languages-list" class="dynamic-list"></div>
+            </div>
+            
+            <button c id="generate-cv">Gerar Currículo</button>
+        </div>
+        
+        <div class="preview-container">
+            <h2>Visualização do Currículo</h2>
+            
+            <div class="theme-selector">
+                <button class="theme-btn" data-theme="default">Tema Padrão</button>
+                <button class="theme-btn" data-theme="modern">Tema Moderno</button>
+                <button class="theme-btn" data-theme="elegant">Tema Elegante</button>
+                <button class="theme-btn" data-theme="creative">Tema Criativo</button>
+            </div>
+            
+            <div id="cv-preview" class="cv">
+                <div class="cv-placeholder">
+                    Preencha o formulário e clique em "Gerar Currículo" para visualizar.
+                </div>
+            </div>
+            
+            <div class="cv-actions">
+                <button id="print-cv">Imprimir Currículo</button>
+                <button id="save-cv">Salvar como PDF</button>
+                <button id="copy-html">Copiar HTML</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
