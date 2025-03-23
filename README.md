@@ -35,7 +35,7 @@ A plataforma oferece modelos modernos e ferramentas inteligentes para destacar e
   Este projeto está sob a licença [MIT](https://choosealicense.com/licenses/mit/)
 
   🌐 Confira Meu Projeto: 
-    Você pode ver o projeto ao vivo aqui: 
+    Você pode ver o projeto ao vivo aqui: https://gerador-de-curriculo.vercel.app/
 
 📫 Como Me Encontrar: 
 
